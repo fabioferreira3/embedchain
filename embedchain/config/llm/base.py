@@ -114,7 +114,7 @@ class BaseLlmConfig(BaseConfig):
         self.system_prompt = system_prompt
         self.query_type = query_type
 
-        if type(template) is str:
+        if isinstance(template, str):
             template = Template(template)
 
         if self.validate_template(template):
